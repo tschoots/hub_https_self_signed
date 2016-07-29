@@ -40,4 +40,18 @@ Absolute path to Keystore File: /opt/blackduck/keystore/server.pkcs12
 
 # server will stop and start
 
+# after everyting is executed you should have the following messageYour changes to the HTTP settings are complete! 
+
+Although the Black Duck Hub has been updated,  due to the port forwarding
+options selected, it has not been started.
+
+In order to enable the Port Forwarding options you selected, and 
+successfully start the Black Duck Hub, the setup-autostart script below MUST be run as 
+the 'root' user.  Change to the 'root' user and run the script:
+
+/opt/blackduck/hub/appmgr/bin/setup-autostart.sh
+
+
+
+
 
