@@ -34,7 +34,8 @@ cd /opt/blackduck/hub/appmgr/bin
 
 # the following answers to the questions if different then default there here below
 Use HTTPS y
-port 8443Redirect Port 443 to 8443?  [y, n]  y
+port 8443
+Redirect Port 443 to 8443?  [y, n]  n
 
 Absolute path to Keystore File: /opt/blackduck/keystore/server.pkcs12
 
