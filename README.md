@@ -20,6 +20,16 @@ openssl genrsa -des3 -out server.key 1024
 # generate Certificate Signing Request
 openssl req -new -key server.key -out server.csr
 
+
+*   first_item
+*   second_item
+*   Country Name (2 letter code) [XX]:NL
+*   State or Province Name (full name) []:Zuid Holland
+*   Locality Name (eg, city) [Default City]:Den Haag
+*   Organization Name (eg, company) [Default Company Ltd]:Maiastra B.V.
+*   Organizational Unit Name (eg, section) []:research
+*   Common Name (eg, your name or your server's hostname) []:chewbacca
+
 # since we do self signed no need to send the request to a CA
 # so generate a self signed certificate
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
@@ -33,6 +43,12 @@ cd /opt/blackduck/hub/appmgr/bin
 ./changeHubHttpSettings.sh
 
 # the following answers to the questions if different then default there here below
+
+*   use HTTPS y
+*   port 8443
+*	Redirect Port 443 to 8443?  [y, n]  n
+*	Common Name (eg, your name or your server's hostname) []: www.sample.com
+
 Use HTTPS y
 port 8443
 Redirect Port 443 to 8443?  [y, n]  n
